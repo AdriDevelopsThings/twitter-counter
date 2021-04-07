@@ -3,7 +3,7 @@
 
 # Install
 ## From source
-You need python>=3.6 with pip. You should install the requirements in the requirements.txt: ``pip install -r requirements.txt``
+You need python>=3.8 with pip. You should install the requirements in the requirements.txt: ``pip install -r requirements.txt``
 
 Start the `__main__.py`.
 
