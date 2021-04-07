@@ -5,7 +5,7 @@ from resources.domain_logic import ini_counters, count
 app = Flask(__name__)
 
 
-@app.route("/<string:webhook>/<string:secret>")
+@app.route("/<string:webhook>/<string:secret>", methods=["POST"])
 def webhook_trigger(webhook, secret):
     from resources.config import configuration
     if secret not in configuration["counter"][webhook]["secrets"]:
