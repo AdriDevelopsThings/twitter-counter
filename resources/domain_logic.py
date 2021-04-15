@@ -28,7 +28,7 @@ def count(counter_name):
         write_cache(cache)
         logging.info(f"Increase count of {counter_name} to {cache[counter_name]['count']}.")
     except RequestException as e:
-        if e.response.status_code == 404:
+        if e.response and e.response.status_code == 404:
             del cache[counter_name]
             ini_counters()
         else:
